@@ -1,30 +1,22 @@
-# Dokumentasi Load Balancer Kafka Topics dengan Docker Compose
+# Dokumentasi WS REST dengan Docker Compose
 
 ## Overview
 
-Dokumentasi ini menjelaskan cara menggunakan Docker Compose untuk secara otomatis membuat load balancer.
+Layanan berfungsi sebagai gateway untuk frontend.
 
 ## Requirements
 
 - Docker dan Docker Compose terinstal pada sistem.
+- Kafka sudah terdeploy.
+- Layanan producer sudah terdeploy.
 - Port `80` atau yang sesuai dengan konfigurasi dibuka agar bisa diakses dari luar vm.
-- Menyesuaikan konfigurasi pada file `nginx.conf`
-
-  - Pastikan pada bagian ini sudah diubah:
-
-    ```conf
-      upstream backend {
-          server <ml1-ip>:<ml1-port>;
-          server <ml2-ip>:<ml2-port>;
-          server <ml3-ip>:<ml3-port>;
-      }
-    ```
+- Pastikan environment variables sudah sesuai.
 
 ## Deployment Steps
 
 ### 1. Menjalankan Docker Compose
 
-Setelah konfigurasi selesai, jalankan Docker Compose untuk memulai proses pembuatan load balancer:
+Setelah konfigurasi selesai, jalankan Docker Compose untuk memulai proses pembuatan layana:
 
 ```sh
 docker-compose up -d
