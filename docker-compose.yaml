@@ -9,6 +9,6 @@ services:
       - PORT=8083
       - PRODUCER_SERVICE=http://<ip-producer>:<port-producer>
       - REDIS_HOST=<ip-redis>:<port-redis>
-      - REDIS_PASSWORD=<redis-port>
+      - REDIS_PASSWORD=<redis-pass>
     ports:
       - '80:8083'
